@@ -1,0 +1,603 @@
+:root {
+    --normal: #a6a877;
+    --grass: #77c850;
+    --fire: #ee7f30;
+    --water: #678fee;
+    --electric: #f7cf2e;
+    --ice: #98d5d7;
+    --ground: #dfbf69;
+    --flying: #098ff0;
+    --poison: #a040a0;
+    --fighting: #bf3029;
+    --psychic: #f65687;
+    --dark: #725847;
+    --rock: #b8a137;
+    --bug: #a8b720;
+    --ghost: #6e5896;
+    --steel: #b9b7cf;
+    --dragon: #6f38f6;
+    --fairy: #f9aec7;
+
+
+}
+    
+
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #098ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
+
+body,
+html {
+    padding: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-color: rgba(24, 89, 136, 0.884);
+    z-index: -2;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    background-image: url(/assets/img/Starters/circleEff.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    height: 90vw;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: rgba(69, 100, 121, 0.29);
+    z-index: -1;
+    filter: blur(15px);
+    animation: rotateBackground 70s linear infinite;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    background-image: url(/assets/img/Starters/circle.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 50%;
+    width: 35vw;
+    height: 35vw;
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 50%;
+    background-color: rgba(97, 128, 158, 0.1);
+    z-index: -1;
+    filter: blur(10px);
+    animation: rotateOpposite 70s linear infinite;
+}
+
+@keyframes rotateBackground {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateOpposite {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+.content {
+    position: relative;
+    width: 57.4rem;
+    height: 100%;
+    padding: 1rem;
+    border: 2px transparent;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 253, 253, 0.2);
+    box-shadow: 0px -5px 10px rgb(31, 30, 30, 0.99);   
+}
+
+.menu-bg {
+    background-image: url(/assets/img/detailBG/menu_bottom_bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    height: 35.9rem;
+    top: 1rem;
+    z-index: -1;
+    margin-bottom: 1.0rem;
+}
+
+.botom-bg-index2 {
+    background-color: rgba(207, 199, 199, 0.8);
+    position: relative;
+    margin: 0.4rem;
+    background-size: cover;    
+    box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.5);
+    height: 29rem;
+    border-radius: 20px;
+    top: 2rem;
+}
+
+
+
+
+.top-buttons {
+    position: sticky;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 00px;
+    z-index: 50;
+}
+
+.poke-front {    
+    height: 37rem;
+    position: relative;
+}
+
+
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.back-button img,
+.badge-heart-button img,
+.badge-shiny-button img {
+    width: 35px;
+    height: auto;
+}
+
+.right-buttons button {
+    margin-left: 10px;
+}
+
+
+
+.previous-btn {
+    cursor: pointer;
+}
+
+.previous-button-pkm,
+.previous-button,
+.next-button-pkm,
+.next-button {
+    height: 40px;
+    width: 40px;
+}
+
+
+.pkm-nmbr {  
+    position: absolute;
+    background-color: inherit;
+    font-size: 4rem;
+    bottom: -0.5rem;
+    right: -0.25rem;    
+    color: rgba(95, 95, 95, 0.151);
+}
+
+
+.pokeContainer {    
+    justify-content: center;
+    align-items: center;
+    height: 65.0vh;
+    width: 100%;
+    position: relative;
+    margin-top: -2.7rem;
+    padding-bottom: 4rem;
+    mask-image: url(/assets/img/detailBG/pkm-bg.svg);
+    mask-size: cover;
+    z-index: -5;
+}
+
+.left-color {
+    position: absolute;
+    width: 50.1%;
+    right: 0;
+    height: 50rem;
+    
+    float: right;    
+    z-index: -3;
+}
+
+.right-color {
+    position: absolute;
+    width: 50%;
+    left: 0px;
+    height: 50rem;
+   
+    float: left;
+    z-index: -3;
+}
+
+
+
+.back-img {   
+    width: 60%;
+    top: 6.5rem;
+    z-index: 5;
+    opacity: 30%;
+}
+
+.poke-composition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 05vh;
+}
+
+.poke-photo {   
+    width: 40%;
+    top: 17.2rem;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+.back-img,
+.poke-photo {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+
+.badge-types {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.badge-types img {
+    width: 23%;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-transform: capitalize;
+    right: 0rem;
+    left: 0rem;
+    font-size: 2rem;
+    top: 1.2rem;
+}
+
+.name-bg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3rem;
+}
+
+.poke-data {
+    display: flex;
+    top: 1.2rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.poke-stats {
+    background-color: #F3EDED;
+    line-height: 1.15;
+    border-radius: 20px;
+    margin: 1rem;
+    position: relative;
+    padding: 0.8rem;
+    top: 0.5rem;
+    box-shadow: 0px -3.5px 8px 0px rgba(0, 0, 0, 0.25), inset 0px -3.5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.badge-pokeball-button {
+    display: flex;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+}
+
+.badge-pokeball {
+    height: 40px;
+    width: 40px;
+}
+
+.nav-btn-box {
+    display: flex;
+    position: absolute;    
+    bottom: 16rem;
+    /* Defina a altura conforme necessário */
+}
+
+.l-nav-buttons {
+    position: relative;
+    left: -1.18rem;
+    
+    
+}
+
+.r-nav-buttons {
+    position: relative;
+    left: 46.7rem;
+    
+}
+
+.previous-button-pkm {
+    position: relative;
+    top: 0.1rem;
+    left: -1.5rem;
+     
+    height: 50px;
+    width: 50px;
+    pointer-events: none;
+}
+
+.next-button-pkm {
+    position: relative;
+    top: 0.1rem;
+    right: 4.9rem;
+    
+    height: 50px;
+    width: 50px;
+    pointer-events: none;
+}
+
+.previous-button-pkm {
+    z-index: 1;
+    /* Garante que a imagem esteja sobre o botão */
+}
+
+
+.ablt-composition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-transform: capitalize;
+    right: 0rem;
+    left: 0rem;
+    font-size: 1.1rem;
+    top: 17.5rem;
+}
+
+.ablt-bg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.5rem;
+    border: 1px solid rgb(255, 255, 255, 0.0);
+    width: 50rem;
+    max-height: 8rem;
+    border-radius: 8px;
+    box-shadow: inset 0px -0.5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.poke-ablt,
+.poke-ablt-hidden {
+    /* border: 1px solid black; */
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.poke-ablt-bg {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 50rem;
+    height: 6rem;
+    position: relative;
+    left: 2.2rem;    
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.75);
+    top: 1.5rem;
+}
+
+.poke-ablt-hidden-bg {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 40rem;
+    max-height: 2rem;
+    position: relative;
+    left: 7rem;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.85);
+    top: 03.9rem;
+}
+
+.hidden-ablt {
+    color: rgb(24, 21, 21);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 4.1rem;
+    line-height: 0.1;
+    border-radius: 25px;
+    filter: drop-shadow(0px 3.5px 6px rgba(0, 0, 0, 0.55));
+    text-transform: capitalize;
+}
+
+.normal-ablt {
+    color: rgb(24, 21, 21);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 2.54rem;
+    line-height: 0.1;
+    opacity: 1;
+    filter: drop-shadow(0px 8.5px 6px rgba(0, 0, 0, 0.55));
+    text-transform: capitalize;
+}
+
+.badge-trade-button {
+    display: flex;
+    position: absolute;
+    bottom: 3.45rem;
+    left: 0.37rem;
+    
+}
+.badge-trade{
+    height: 43px;
+    width: 43px;
+}
+
+
+
+.badge-lkg-trade-button{
+    display: flex;
+    position: absolute;
+    bottom: -7.32rem;
+    right: 6.37rem;
+    
+}
+
+.badge-lkg-trade{
+    height: 53px;
+    width: 53px;
+}
+
+
+
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-btn-box {
+        flex-direction: column; /* Empilha os botões verticalmente em telas pequenas */
+    }
+
+    .l-nav-buttons, .r-nav-buttons {
+        justify-content: center; /* Centraliza os botões */
+        padding: 5px 0; /* Ajusta o espaçamento */
+    }
+}
+
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* @media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+} */
