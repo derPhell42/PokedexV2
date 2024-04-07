@@ -1,0 +1,242 @@
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #098ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 0.5rem 1rem 1rem 1rem;
+    border-radius: 1rem;
+}
+
+
+.number {
+    display: flex;
+    align-items:center; /* Alinha os itens verticalmente ao centro */
+justify-content: space-between;
+}
+
+.badge-number-container {
+    display:flex; /* Faz com que as badges fiquem na mesma linha */
+    
+}
+
+/* Estilo para as badges */
+.badge-number-container img {
+    margin-right: 5px; /* Adiciona um pequeno espaço entre cada badge */
+    
+}
+
+.pokemon .number {
+    color: #ffffff;
+    opacity: 1;
+    text-align: right;
+    font-size: .625rem;
+    opacity: 1;
+    
+
+}
+
+
+
+.pokemon .name {
+    color: #fff;
+    margin-bottom: .25rem;
+    text-transform: capitalize;
+}
+
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.pokemon .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-transform: capitalize;
+}
+
+.pokemon .detail .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.pokeContainer {
+    position: relative;
+    width: 80px;
+    /* Defina o tamanho do container conforme necessário */
+    height: 80px;
+    /* Defina o tamanho do container conforme necessário */
+}
+
+.poke-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Garante que as imagens ocupem todo o espaço do container */
+    height: 100%;
+    /* Garante que as imagens ocupem todo o espaço do container */
+}
+
+.back-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    /* Garante que as imagens ocupem todo o espaço do container */
+    height: 150%;
+    /* Garante que as imagens ocupem todo o espaço do container */
+    top: -20px;
+    left: -20px;
+    opacity: 30%;
+    filter: brightness(5%) invert(100%) saturate(0);
+    
+}
+
+.badge-heart, .badge-shiny, .badge-pokeball{
+    /* display: flex row;
+    justify-content: left; */
+    height: 16px;
+    width: 16px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    
+    
+}
+.badge-trade{
+    /* display: flex row;
+    justify-content: left; */
+    height: 18px;
+    width: 18px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    transform: translateY(-1px);
+    
+    
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: #ffffff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+}
+
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

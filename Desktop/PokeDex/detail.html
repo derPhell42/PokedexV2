@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Nosso CSS -->
+
+    <link rel="stylesheet" href="/assets/css/detail.css">
+
+</head>
+
+<body>
+
+    <div class="content">
+
+
+        <div class="poke-front">
+            <div class="pkm-nmbr">${pokemon.number}</div>
+
+            <div class="top-buttons">
+                <button class="back-button" data-state="inactive" onclick="window.location.href = 'index.html';"
+                    title="Back!">
+                    <img class="back-button-empty" src="/assets/img/BackArrow.svg" alt="back">
+                </button>
+                <div class="right-buttons">
+                    <button class="badge-heart-button" data-state="inactive" title="Favorite!">
+                        <img class="badge-heart" src="/assets/img/heartEmpty.svg" alt="Favorite">
+                    </button>
+                    <button class="badge-shiny-button" data-state="inactive" title="Shiny">
+                        <img class="badge-shiny" src="/assets/img/ShinyMarkEmpty.svg" alt="Shiny">
+                    </button>
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="pokeContainer">
+                <div class="poke-types">
+                    <div class="left-color"></div>
+                    <div class="right-color"></div>
+                </div>
+
+            </div>
+
+
+            <button class="badge-trade-button" data-state="inactive" title="Ready for trade!">
+                <img class="badge-trade" src="/assets/img/TradeV2Empty.svg" alt="Tradeable">
+            </button>
+            <button class="badge-lkg-trade-button" data-state="inactive" title="Seeking!">
+                <img class="badge-lkg-trade" src="/assets/img/LokingballEmpty.svg" alt="Tradeable">
+            </button>
+            <button class="badge-pokeball-button" data-state="inactive" title="Caught!">
+                <img class="badge-pokeball" src="/assets/img/PokeballEmpty.svg" alt="Caught">
+            </button>
+
+            <div class="nav-btn-box">
+                <div class="l-nav-buttons">
+                    <button class="previous-btn">
+                        <img class="previous-button" src="/assets/img/Previous.svg" alt="Previous">
+                    </button>
+                    <img class="previous-button-pkm" src="/assets/img/Starters/Blue.png" alt="blue">
+                </div>
+
+                <div class="r-nav-buttons">
+                    <button class="next-btn">
+                        <img class="next-button" src="/assets/img/Next.svg" alt="Next">
+                    </button>
+                    <img class="next-button-pkm" src="/assets/img/Starters/Red.png" alt="red">
+                </div>
+            </div>
+
+
+
+            <div class="poke-composition">
+                <img class="back-img" src="/assets/img/PokeTextBackTilt.png">
+
+                <img class="poke-photo" src="${pokemon.photo}" alt="${pokemon.name}"
+                    data-normal="${pokemon.photo}" data-shiny="${pokemon.photoSh}">
+            </div>
+
+
+        </div>
+        <div class="menu-bg">
+            <div class="badge-types">
+                <img src="" alt=" Type">
+                <img src="" alt=" Type">
+            </div>
+
+            <div class="name">
+                <p>${pokemon.name}</p>
+                <img class="name-bg" src="/assets/img/detailBG/name-bg.svg">
+            </div>
+            <br>
+            <div class="botom-bg-index2">
+                <span class="poke-data">Peso: ${pokemon.weight} Altura: ${pokemon.height}
+
+                </span>
+
+                <span class="stats-bg">
+                    <div class="poke-stats">
+                        <p>HP - ${pokemon.hp}</p>
+                        <p>Atk - ${pokemon.atk}</p>
+                        <p>Def - ${pokemon.def}</p>
+                        <p>SAtk - ${pokemon.spatak}</p>
+                        <p>SDef - ${pokemon.spdef}</p>
+                        <p>Speed - ${pokemon.speed}</p>
+                    </div>
+                </span>
+                <div class="ablt-composition">
+                    <p>Abilities</p>
+                    <img class="ablt-bg" src="/assets/img/detailBG/ablt-bg.svg">
+                </div>
+
+                <div class="poke-ablt">
+                    <img class="poke-ablt-bg" src="/assets/img/detailBG/abltRegular.svg" alt="">
+                </div>
+                <div class="normal-ablt">
+                    <p>${pokemon.ablt1}</p>
+
+                    <p>${pokemon.ablt2}</p>
+                </div>
+
+
+
+                <div class="poke-ablt-hidden">
+                    <img class="poke-ablt-hidden-bg" src="/assets/img/detailBG/abltHidden.svg" alt="">
+                </div>
+                <div class="hidden-ablt">
+                    <p>${pokemon.ablt3hidden}</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <!-- Nosso JS -->
+    <script src="/assets/js/poke-model.js"></script>
+    <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/detail.js"></script>
+
+
+
+</body>
+
+</html>
