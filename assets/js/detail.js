@@ -323,7 +323,7 @@ function updateTypeColors(pokemon) {
         // Atualizar as badges do Pokémon com base nos tipos
         badgeTypes.forEach((badge, index) => {
             if (index < pokemon.types.length) {
-                badge.src = `/assets/img/Badges/${pokemon.types[index]}Badge.png`;
+                badge.src = `/assets/img/Badges/${pokemon.types[index]}Badge.svg`;
                 badge.alt = `${pokemon.types[index]} Type`;
                 badge.style.display = 'inline-block';
             } else {
