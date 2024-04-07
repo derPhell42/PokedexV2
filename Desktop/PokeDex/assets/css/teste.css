@@ -1,0 +1,866 @@
+/* Group 1 */
+
+position: absolute;
+width: 332.12px;
+height: 720px;
+
+
+
+/* heartColored 3 */
+
+position: absolute;
+visibility: hidden;
+width: 25px;
+height: 25px;
+
+background: url(heartColored.png);
+
+
+/* ShinyMarkColored */
+
+position: absolute;
+visibility: hidden;
+width: 25px;
+height: 25px;
+
+background: url(ShinyMarkColored.png);
+
+
+/* Rectangle 10 */
+
+position: absolute;
+width: 330px;
+height: 720px;
+
+background: #D9D9D9;
+
+
+/* Mask group */
+
+position: absolute;
+width: 314px;
+height: 336.44px;
+
+
+
+/* Mask */
+
+position: absolute;
+width: 314px;
+height: 336.44px;
+
+background: linear-gradient(180deg, rgba(255, 255, 255, 0) 23.76%, #FFFFFF 101.65%), #A040A0;
+border-radius: 25px;
+
+
+/* Rectangle 5 */
+
+position: absolute;
+width: 314px;
+height: 726px;
+
+background: linear-gradient(180deg, rgba(255, 255, 255, 0) 19.25%, #FFFFFF 42.56%), #77C850;
+border-radius: 25px;
+
+
+/* Rectangle 6 */
+
+position: absolute;
+width: 157px;
+height: 700px;
+
+background: linear-gradient(179.98deg, rgba(255, 255, 255, 0) 0.02%, #FFFFFF 43.93%), #A040A0;
+
+
+/* PokeballColored 3 */
+
+position: absolute;
+visibility: hidden;
+width: 25px;
+height: 25px;
+
+background: url(PokeballColored.png);
+
+
+/* PokeballEmpty 3 */
+
+position: absolute;
+width: 25px;
+height: 25px;
+
+background: url(PokeballEmpty.png);
+
+
+/* #003 */
+
+position: absolute;
+width: 60px;
+height: 25px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 29px;
+
+color: #D9D9D9;
+
+
+
+/* Rectangle 11 */
+
+position: absolute;
+width: 314px;
+height: 365px;
+
+background: radial-gradient(50% 48.01% at 50% 53.84%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.31) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #F4E6E6;
+border-radius: 23px;
+
+
+/* GrassBadge */
+
+position: absolute;
+width: 100px;
+height: 20px;
+
+background: url(GrassBadge.png);
+
+
+/* PoisonBadge */
+
+position: absolute;
+width: 100px;
+height: 20px;
+
+background: url(PoisonBadge.png);
+
+
+/* heartEmpty 4 */
+
+position: absolute;
+width: 25px;
+height: 25px;
+
+background: url(heartEmpty.png);
+
+
+/* PokeTextBack */
+
+position: absolute;
+width: 253.45px;
+height: 218.34px;
+
+background: url(PokeTextBack.png);
+transform: rotate(-33.87deg);
+
+
+/* ShinyMarkEmpty */
+
+position: absolute;
+width: 25px;
+height: 25px;
+
+background: url(ShinyMarkEmpty.png);
+
+
+/* image 6 */
+
+position: absolute;
+width: 257px;
+height: 276px;
+
+background: url(image.png);
+
+
+/* Mask group */
+
+position: absolute;
+width: 305px;
+height: 20px;
+
+
+
+/* Rectangle 11 */
+
+position: absolute;
+width: 305px;
+height: 20px;
+
+background: #B3BAAF;
+border-radius: 6px;
+
+
+/* Rectangle 14 */
+
+position: absolute;
+width: 9.66px;
+height: 44.16px;
+
+background: #FFFFFF;
+transform: rotate(-37.25deg);
+
+
+/* Rectangle 15 */
+
+position: absolute;
+width: 9.66px;
+height: 44.16px;
+
+background: #FFFFFF;
+transform: rotate(-37.25deg);
+
+
+/* Rectangle 12 */
+
+position: absolute;
+width: 48.48px;
+height: 105px;
+
+background: #403A81;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+transform: rotate(26.43deg);
+
+
+/* Rectangle 13 */
+
+position: absolute;
+width: 48.48px;
+height: 105px;
+
+background: #403A81;
+box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
+transform: rotate(26.43deg);
+
+
+/* Rectangle 10 */
+
+position: absolute;
+width: 305px;
+height: 20px;
+
+background: rgba(179, 186, 175, 0.14);
+border-radius: 6px;
+
+
+/* Venusaur */
+
+position: absolute;
+width: 88px;
+height: 18px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+
+color: #000000;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 305px;
+height: 306px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Rectangle 16 */
+
+position: absolute;
+width: 63px;
+height: 20px;
+
+background: #E7E5E5;
+border-radius: 3px;
+
+
+/* Rectangle 9 */
+
+position: absolute;
+width: 305px;
+height: 294px;
+
+background: #E7E5E5;
+border-radius: 15px;
+
+
+/* Rectangle 8 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 305px;
+height: 294px;
+
+background: rgba(231, 229, 229, 0.7);
+border-bottom: 1px solid #000000;
+border-radius: 15px;
+
+
+/* PokeTextBack */
+
+position: absolute;
+width: 108.49px;
+height: 100.05px;
+
+background: url(PokeTextBack.png);
+transform: rotate(-33.87deg);
+
+
+/* About */
+
+position: absolute;
+width: 33px;
+height: 13px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 200;
+font-size: 11px;
+line-height: 13px;
+/* identical to box height */
+
+color: #5C5C5C;
+
+
+
+/* Moves */
+
+position: absolute;
+width: 39px;
+height: 13px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 200;
+font-size: 11px;
+line-height: 13px;
+/* identical to box height */
+
+color: #5C5C5C;
+
+
+
+/* Evolution */
+
+position: absolute;
+width: 52px;
+height: 13px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 200;
+font-size: 11px;
+line-height: 13px;
+/* identical to box height */
+
+color: #5C5C5C;
+
+
+
+/* Base stats */
+
+position: absolute;
+width: 58px;
+height: 13px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 11px;
+line-height: 13px;
+/* identical to box height */
+
+color: #5C5C5C;
+
+
+
+/* Line 1 */
+
+position: absolute;
+width: 52px;
+height: 0px;
+
+border: 1px solid #0047FF;
+
+
+/* proximo */
+
+position: absolute;
+width: 28px;
+height: 28px;
+
+background: url(proximo.png);
+
+
+/* proximo */
+
+position: absolute;
+width: 28px;
+height: 28px;
+
+background: url(proximo.png);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* image 7 */
+
+position: absolute;
+width: 39px;
+height: 48px;
+
+background: url(image.png);
+
+
+/* image 8 */
+
+position: absolute;
+width: 48px;
+height: 56px;
+
+background: url(image.png);
+
+
+/* Rectangle 29 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 271px;
+height: 200px;
+
+background: #F3EDED;
+opacity: 0.45;
+border-width: 0px 1px 1px 1px;
+border-style: solid;
+border-color: #FFFFFF;
+box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25), inset 0px -5px 4px -2px rgba(0, 0, 0, 0.25);
+border-radius: 24px;
+
+
+/* HP Attack Defense Sp. Atk Sp. Def Speed */
+
+position: absolute;
+width: 41px;
+height: 255px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+text-align: center;
+
+color: #04B656;
+
+
+
+/* Line 2 */
+
+position: absolute;
+width: 129px;
+height: 0px;
+
+border: 1px solid #FFFFFF;
+transform: rotate(90deg);
+
+
+/* Rectangle 23 */
+
+position: absolute;
+width: 180px;
+height: 10px;
+
+background: linear-gradient(90deg, rgba(145, 169, 191, 0) 0%, rgba(68, 79, 89, 0.34) 100%);
+border-radius: 63px;
+
+
+/* Rectangle 28 */
+
+position: absolute;
+width: 180px;
+height: 10px;
+
+background: linear-gradient(90deg, rgba(145, 169, 191, 0) 0%, rgba(68, 79, 89, 0.34) 100%);
+border-radius: 63px;
+
+
+/* Rectangle 27 */
+
+position: absolute;
+width: 180px;
+height: 10px;
+
+background: linear-gradient(90deg, rgba(145, 169, 191, 0) 0%, rgba(68, 79, 89, 0.34) 100%);
+border-radius: 63px;
+
+
+/* Rectangle 26 */
+
+position: absolute;
+width: 180px;
+height: 10px;
+
+background: linear-gradient(90deg, rgba(145, 169, 191, 0) 0%, rgba(68, 79, 89, 0.34) 100%);
+border-radius: 63px;
+
+
+/* Rectangle 25 */
+
+position: absolute;
+width: 180px;
+height: 10px;
+
+background: linear-gradient(90deg, rgba(145, 169, 191, 0) 0%, rgba(68, 79, 89, 0.34) 100%);
+border-radius: 63px;
+
+
+/* Rectangle 17 */
+
+position: absolute;
+width: 175px;
+height: 6px;
+
+background: #D9D9D9;
+border-radius: 63px;
+
+
+/* Rectangle 24 */
+
+position: absolute;
+width: 180px;
+height: 10px;
+
+background: linear-gradient(90deg, rgba(145, 169, 191, 0) 0%, rgba(68, 79, 89, 0.34) 100%);
+border-radius: 63px;
+
+
+/* Rectangle 22 */
+
+position: absolute;
+width: 175px;
+height: 6px;
+
+background: #D9D9D9;
+border-radius: 63px;
+
+
+/* Rectangle 20 */
+
+position: absolute;
+width: 175px;
+height: 6px;
+
+background: #D9D9D9;
+border-radius: 63px;
+
+
+/* Rectangle 21 */
+
+position: absolute;
+width: 175px;
+height: 6px;
+
+background: #D9D9D9;
+border-radius: 63px;
+
+
+/* Rectangle 19 */
+
+position: absolute;
+width: 175px;
+height: 6px;
+
+background: #D9D9D9;
+border-radius: 63px;
+
+
+/* Rectangle 18 */
+
+position: absolute;
+width: 175px;
+height: 6px;
+
+background: #D9D9D9;
+border-radius: 63px;
+
+
+/* Mask group */
+
+position: absolute;
+width: 271px;
+height: 13px;
+
+box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+
+/* Rectangle 13 */
+
+position: absolute;
+width: 271px;
+height: 13px;
+
+background: linear-gradient(90.86deg, rgba(118, 255, 222, 0) 50.61%, rgba(118, 255, 222, 0.2) 80.55%), rgba(204, 218, 198, 0.14);
+border-radius: 6px;
+
+
+/* Rectangle 10 */
+
+position: absolute;
+width: 271px;
+height: 13px;
+
+background: linear-gradient(90.86deg, rgba(118, 255, 222, 0) 50.61%, rgba(118, 255, 222, 0.2) 80.55%), rgba(204, 218, 198, 0.14);
+border-radius: 6px;
+
+
+/* Rectangle 30 */
+
+position: absolute;
+width: 32.48px;
+height: 39.07px;
+
+background: #403A81;
+transform: rotate(31.67deg);
+
+
+/* Rectangle 31 */
+
+position: absolute;
+width: 32.48px;
+height: 39.07px;
+
+background: #403A81;
+transform: rotate(31.67deg);
+
+
+/* Mask group */
+
+position: absolute;
+width: 271px;
+height: 25px;
+
+
+
+/* Rectangle 32 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 271px;
+height: 25px;
+
+background: linear-gradient(95.27deg, rgba(142, 128, 128, 0) 45.1%, rgba(142, 128, 128, 0.2) 54.9%), rgba(204, 218, 198, 0.14);
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: #FFFFFF;
+border-radius: 6px;
+
+
+/* Rectangle 30 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 18.37px;
+height: 299.79px;
+
+background: #403A81;
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: #FFFFFF;
+transform: rotate(-90deg);
+
+
+/* Rectangle 11 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 271px;
+height: 25px;
+
+background: linear-gradient(95.27deg, rgba(142, 128, 128, 0) 45.1%, rgba(142, 128, 128, 0.2) 54.9%), rgba(204, 218, 198, 0.14);
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: #FFFFFF;
+border-radius: 6px;
+
+
+/* Mask group */
+
+position: absolute;
+width: 271px;
+height: 15px;
+
+
+
+/* Rectangle 32 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 271px;
+height: 15px;
+
+background: linear-gradient(90.77deg, rgba(201, 11, 11, 0) 42.9%, rgba(201, 11, 11, 0.2) 89.57%), rgba(204, 218, 198, 0.14);
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: #FFFFFF;
+border-radius: 6px;
+
+
+/* Rectangle 31 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 32px;
+height: 271px;
+
+background: #403A81;
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: #FFFFFF;
+transform: rotate(-90deg);
+
+
+/* Rectangle 12 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 271px;
+height: 15px;
+
+background: linear-gradient(90.77deg, rgba(201, 11, 11, 0) 42.9%, rgba(201, 11, 11, 0.2) 89.57%), rgba(204, 218, 198, 0.14);
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: #FFFFFF;
+border-radius: 6px;
+
+
+/* Abilities */
+
+position: absolute;
+width: 37px;
+height: 13px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 11px;
+line-height: 13px;
+/* identical to box height */
+
+color: #5C5C5C;
+
+
+
+/* Regular */
+
+position: absolute;
+width: 37px;
+height: 13px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 11px;
+line-height: 13px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Hidden */
+
+position: absolute;
+width: 37px;
+height: 13px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 11px;
+line-height: 13px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* image 11 */
+
+position: absolute;
+width: 25px;
+height: 25px;
+
+background: url(image.png);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* image 12 */
+
+position: absolute;
+width: 20px;
+height: 20px;
+
+background: url(image.png);
+transform: rotate(-119.84deg);
+
+
+/* image 19 */
+
+position: absolute;
+width: 25px;
+height: 25px;
+
+background: url(image.png);
+
+
+/* image 20 */
+
+position: absolute;
+width: 20px;
+height: 20px;
+
+background: url(image.png);
+
+
+/* For trade */
+
+position: absolute;
+width: 32px;
+height: 9px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 8px;
+line-height: 9px;
+
+color: #BABABA;
+
+
+
+/* PokeOpt 1 */
+
+position: absolute;
+width: 60px;
+height: 60px;
+
+background: url(PokeOpt.png);
+
+
+/* TradeEmpty 1 */
+
+position: absolute;
+width: 25px;
+height: 25px;
+
+background: url(TradeEmpty.png);
