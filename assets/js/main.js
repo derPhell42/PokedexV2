@@ -27,7 +27,7 @@ function loadPokemonItens(offset, limit) {
                                 <img class="badge-trade" src="/assets/img/TradeV2Empty.svg" alt="Tradeable">
                             </button>
                             <button class="badge-lkg-trade-button" data-state="inactive" title="Seeking">
-                                <img class="badge-lkg-trade" src="/assets/img/LokingballEmpty.svg" alt="Tradeable">
+                                <img class="badge-lkg-trade" src="/assets/img/LokingballEmpty.svg" alt="Seeking">
                             </button>
                         </div>
                         #${pokemon.number}
