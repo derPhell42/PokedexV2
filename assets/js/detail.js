@@ -1,7 +1,76 @@
+// Funções para carregar o Pokémon anterior e o próximo
+function loadPreviousPokemon() {
+    // Extrair o número do Pokémon atual da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    let pokemonNumber = parseInt(urlParams.get('pokemonNumber'));
+
+    // Se o número do Pokémon atual for maior que 1, carregue o Pokémon anterior
+    if (pokemonNumber > 1) {
+        pokemonNumber--;
+        updatePokemonNumber(pokemonNumber); // Atualiza o número do Pokémon na URL
+        fetchPokemonDetails(pokemonNumber);
+    } else {
+        // Se o número do Pokémon atual for 1 ou menos, não há Pokémon anterior
+        console.log('Não há Pokémon anterior');
+    }
+}
+
+function loadNextPokemon() {
+    // Extrair o número do Pokémon atual da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    let pokemonNumber = parseInt(urlParams.get('pokemonNumber'));
+
+    // Se o número do Pokémon atual for menor que o número máximo (no momento é 151), carregue o próximo Pokémon
+    if (pokemonNumber < 151) {
+        pokemonNumber++;
+        updatePokemonNumber(pokemonNumber); // Atualiza o número do Pokémon na URL
+        fetchPokemonDetails(pokemonNumber);
+    } else {
+        // Se o número do Pokémon atual for igual ou maior que o número máximo, não há próximo Pokémon
+        console.log('Não há próximo Pokémon');
+    }
+}
+
+function updatePokemonNumber(newNumber) {
+    // Atualiza o número do Pokémon na URL
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('pokemonNumber', newNumber);
+    window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`);
+
+    // Atualiza a visibilidade dos botões com base no número do Pokémon
+    const previousButton = document.querySelector('.previous-btn');
+    const nextButton = document.querySelector('.next-btn');
+    
+    // Verifica se há um Pokémon anterior
+    if (newNumber <= 1) {
+        previousButton.style.display = 'none'; // Oculta o botão de "Anterior"
+    } else {
+        previousButton.style.display = 'block'; // Exibe o botão de "Anterior"
+    }
+    
+    // Verifica se há um próximo Pokémon
+    if (newNumber >= 151) {
+        nextButton.style.display = 'none'; // Oculta o botão de "Próximo"
+    } else {
+        nextButton.style.display = 'block'; // Exibe o botão de "Próximo"
+    }
+}
+
+// Adiciona os ouvintes de evento aos botões Previous e Next
 document.addEventListener("DOMContentLoaded", function () {
+    const previousButton = document.querySelector('.previous-btn');
+    const nextButton = document.querySelector('.next-btn');
+
+    previousButton.addEventListener('click', loadPreviousPokemon);
+    nextButton.addEventListener('click', loadNextPokemon);
+
     // Extrair o número do Pokémon da URL
     const urlParams = new URLSearchParams(window.location.search);
     const pokemonNumber = urlParams.get('pokemonNumber');
+
+    // Atualiza a visibilidade dos botões com base no número do Pokémon
+    updatePokemonNumber(parseInt(pokemonNumber));
+    
 
     // Obter os detalhes do Pokémon com base no número
     fetchPokemonDetails(pokemonNumber);
@@ -112,6 +181,7 @@ function fetchPokemonDetails(pokemonNumber) {
             const pokemonImage = document.querySelector('.poke-photo');
             pokemonImage.src = pokemon.photo;
             pokemonImage.alt = pokemon.name;
+            
 
             const nameElement = document.querySelector('.name p');
             nameElement.textContent = pokemon.name;
@@ -349,7 +419,10 @@ function updateTypeColors(pokemon) {
             badge.style.display = 'none';
         });
     }
+    
 }
+
+
 
 // Chamada da função para atualizar as cores dos tipos e as badges do Pokémon
 updateTypeColors(pokemon);

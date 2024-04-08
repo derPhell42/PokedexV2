@@ -266,7 +266,7 @@ button {
     background-color: inherit;
     font-size: 4rem;
     bottom: -0.5rem;
-    right: -0.25rem;    
+    right: -0.45rem;    
     color: rgba(95, 95, 95, 0.151);
 }
 
@@ -405,28 +405,34 @@ button {
 .nav-btn-box {
     display: flex;
     position: absolute;    
+    justify-content: space-between;
     bottom: 16rem;
     /* Defina a altura conforme necessário */
 }
 
 .l-nav-buttons {
-    position: relative;
-    left: -1.18rem;
-    
+    position: absolute;
+    left: -1.18rem;    
     
 }
 
 .r-nav-buttons {
-    position: relative;
-    left: 46.7rem;
+    position: absolute;
+    right: -56.57rem;
     
 }
 
+.pkm-btn-nav{
+    position: absolute;
+    justify-content: space-between;
+    bottom: 13rem;
+    display: flex;
+    pointer-events: none;
+}
 .previous-button-pkm {
-    position: relative;
-    top: 0.1rem;
-    left: -1.5rem;
-     
+    position: absolute;
+    top: -0.14rem;
+    left: 0.89rem;     
     height: 50px;
     width: 50px;
     pointer-events: none;
@@ -434,8 +440,8 @@ button {
 
 .next-button-pkm {
     position: relative;
-    top: 0.1rem;
-    right: 4.9rem;
+    top: -0.14rem;
+    right: -51.30rem;
     
     height: 50px;
     width: 50px;
