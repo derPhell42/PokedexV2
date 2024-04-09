@@ -97,7 +97,7 @@
             <div class="poke-composition">
                 <img class="back-img" src="/assets/img/PokeTextBackTilt.png">
 
-                <img class="poke-photo" src="${pokemon.photo}" alt="${pokemon.name}" data-normal="${pokemon.photo}"
+                <img class="poke-photo" src="" alt="${pokemon.name}" data-cry="${pokemon.cries}" data-normal="${pokemon.photo}"
                     data-shiny="${pokemon.photoSh}">
             </div>
 
@@ -122,37 +122,37 @@
                 <span class="stats-bg">
                     <div class="poke-stats">
                     <div class="stat-bar">Hp
-                        <div class="stat-label">Hp</div>
+                        <div class="stat-label1">${pokemon.hp}</div>
                         <div class="stat-bar-container">
                             <div id="hp-bar" class="stat-bar-inner1"></div>
                         </div>
                     </div>
                     <div class="stat-bar"> Atk
-                        <div class="stat-label">Atk</div>
+                        <div class="stat-label2">${pokemon.atk}</div>
                         <div class="stat-bar-container">
                             <div id="atk-bar" class="stat-bar-inner2"></div>
                         </div>
                     </div>
                     <div class="stat-bar"> Def
-                        <div class="stat-label">Def</div>
+                        <div class="stat-label3">${pokemon.def}</div>
                         <div class="stat-bar-container">
                             <div id="def-bar" class="stat-bar-inner3"></div>
                         </div>
                     </div>
                     <div class="stat-bar"> Spatk
-                        <div class="stat-label">Spatk</div>
+                        <div class="stat-label4">${pokemon.spatk}</div>
                         <div class="stat-bar-container">
                             <div id="spatk-bar" class="stat-bar-inner4"></div>
                         </div>
                     </div>
                     <div class="stat-bar"> Spdef
-                        <div class="stat-label">Spdef</div>
+                        <div class="stat-label5">${pokemon.spdef}</div>
                         <div class="stat-bar-container">
                             <div id="spdef-bar" class="stat-bar-inner5"></div>
                         </div>
                     </div>
                     <div class="stat-bar">Speed
-                        <div class="stat-label">Speed</div>
+                        <div class="stat-label6">${pokemon.speed}</div>
                         <div class="stat-bar-container">
                             <div id="speed-bar" class="stat-bar-inner6"></div>
                         </div>
@@ -171,9 +171,9 @@
                     <img class="poke-ablt-bg" src="/assets/img/detailBG/abltRegular.svg" alt="">
                 </div>
                 <div class="normal-ablt">
-                    <p>${pokemon.ablt1}</p>
+                    <p class="n-ablt1">${pokemon.ablt1}</p>
 
-                    <p>${pokemon.ablt2}</p>
+                    <p class="n-ablt2">${pokemon.ablt2}</p>
                 </div>
 
 

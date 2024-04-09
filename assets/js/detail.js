@@ -184,66 +184,13 @@ function fetchPokemonDetails(pokemonNumber) {
                 const percent = (value / 300) * 100; // Assumindo que o máximo seja 300
                 bar.style.width = percent + '%';
             }
-            
-            updateStatBar(pokemon.hp, 'hp-bar');
-            updateStatBar(pokemon.atk, 'atk-bar');
-            updateStatBar(pokemon.def, 'def-bar');
-            updateStatBar(pokemon.spatk, 'spatk-bar');
-            updateStatBar(pokemon.spdef, 'spdef-bar');
-            updateStatBar(pokemon.speed, 'speed-bar');
-            
-        
 
-
-            const pokemonImage = document.querySelector('.poke-photo');
-            pokemonImage.src = pokemon.photo;
-            pokemonImage.alt = pokemon.name;
-
-
-            const nameElement = document.querySelector('.name p');
-            nameElement.textContent = pokemon.name;
-
-            const numberElement = document.querySelector('.pkm-nmbr');
-            numberElement.textContent = `#${pokemon.number}`;
-
-            const hweightElement = document.querySelector('.poke-data');
-            hweightElement.textContent = `Peso: ${formattedWeight} | Altura: ${formattedHeight}`;
-
-            const hpElement = document.querySelector('.poke-stats p:nth-of-type(1)');
-            hpElement.textContent = `HP - ${pokemon.hp}`;
-
-            const atkElement = document.querySelector('.poke-stats p:nth-of-type(2)');
-            atkElement.textContent = `ATK - ${pokemon.atk}`;
-
-            const defElement = document.querySelector('.poke-stats p:nth-of-type(3)');
-            defElement.textContent = `DEF - ${pokemon.def}`;
-
-            const spatkElement = document.querySelector('.poke-stats p:nth-of-type(4)');
-            spatkElement.textContent = `SPATK - ${pokemon.spatk}`;
-
-            const spdefElement = document.querySelector('.poke-stats p:nth-of-type(5)');
-            spdefElement.textContent = `SPDEF - ${pokemon.spdef}`;
-
-            const speedElement = document.querySelector('.poke-stats p:nth-of-type(6)');
-            speedElement.textContent = `Speed - ${pokemon.speed}`;
-
-            const ablt1Element = document.querySelector('.normal-ablt :nth-of-type(1)');
-            ablt1Element.textContent = pokemon.ablt1;
-
-            const ablt2Element = document.querySelector('.normal-ablt :nth-of-type(2)');
-            ablt2Element.textContent = pokemon.ablt2;
-
-            const hiddenabltElement = document.querySelector('.hidden-ablt p');
-            hiddenabltElement.textContent = pokemon.ablt3hidden;
-
-            // Obter elemento HTML onde deseja exibir o choro do Pokémon
-            const cryElement = document.querySelector('.poke-photo');
-            cryElement.dataset.cry = pokemon.cries; // Atribua a URL do áudio aqui
-
-            
-
-           
-           
+            updateStatBar(pokemon.hp, `hp-bar`);
+            updateStatBar(pokemon.atk, `atk-bar`);
+            updateStatBar(pokemon.def, `def-bar`);
+            updateStatBar(pokemon.spatk, `spatk-bar`);
+            updateStatBar(pokemon.spdef, `spdef-bar`);
+            updateStatBar(pokemon.speed, `speed-bar`);
 
             // Adicionar ouvinte de evento de clique aos botões de coração
             document.querySelectorAll('.badge-heart-button').forEach(button => {
@@ -363,6 +310,85 @@ function fetchPokemonDetails(pokemonNumber) {
                 });
             });
 
+            // Adicionar evento de clique para as imagens de Pokémon
+
+
+            const pokemonImage = document.querySelector('.poke-photo');
+            pokemonImage.src = pokemon.photo;
+            pokemonImage.alt = pokemon.name;
+
+
+            const nameElement = document.querySelector('.name p');
+            nameElement.textContent = pokemon.name;
+
+            const numberElement = document.querySelector('.pkm-nmbr');
+            numberElement.textContent = `#${pokemon.number}`;
+
+            const hweightElement = document.querySelector('.poke-data');
+            hweightElement.textContent = `Peso: ${formattedWeight} | Altura: ${formattedHeight}`;
+
+            const hpElement = document.querySelector('.stat-label1');
+            hpElement.textContent = `${pokemon.hp}`;
+
+            const atkElement = document.querySelector('.stat-label2');
+            atkElement.textContent = `${pokemon.atk}`;
+
+            const defElement = document.querySelector('.stat-label3');
+            defElement.textContent = `${pokemon.def}`;
+
+            const spatkElement = document.querySelector('.stat-label4');
+            spatkElement.textContent = `${pokemon.spatk}`;
+
+            const spdefElement = document.querySelector('.stat-label5');
+            spdefElement.textContent = `${pokemon.spdef}`;
+
+            const speedElement = document.querySelector('.stat-label6');
+            speedElement.textContent = `${pokemon.speed}`;
+
+            const ablt1Element = document.querySelector('.n-ablt1');
+            ablt1Element.textContent = pokemon.ablt1;
+
+            const ablt2Element = document.querySelector('.n-ablt2');
+            ablt2Element.textContent = pokemon.ablt2;
+
+            const hiddenabltElement = document.querySelector('.hidden-ablt p');
+            hiddenabltElement.textContent = pokemon.ablt3hidden;
+
+            // Obter elemento HTML onde deseja exibir o choro do Pokémon
+            const cryElement = document.querySelector('.poke-photo');
+            cryElement.dataset.cry = pokemon.cries; // Atribua a URL do áudio aqui
+
+
+            document.querySelectorAll('.poke-photo').forEach(img => {
+                img.addEventListener('click', () => {
+                    const cryUrl = img.getAttribute('data-cry');
+                    playPokemonCry(cryUrl);
+                });
+            });
+
+            function playPokemonCry(cryUrl, volume = 0.1) {
+                // Cria um elemento de áudio
+                var audio = new Audio(cryUrl);
+
+                // Define o volume do áudio
+                audio.volume = volume;
+
+                // Adiciona um evento de carga para garantir que o áudio esteja pronto para reprodução
+                audio.addEventListener('canplaythrough', () => {
+                    // Tenta reproduzir o áudio
+                    audio.play()
+                        .then(() => {
+                            console.log('Áudio do choro reproduzido com sucesso!');
+                        })
+                        .catch((error) => {
+                            console.error('Erro ao reproduzir áudio do choro:', error);
+                        });
+                }, false);
+            }
+
+
+
+
             // Continue manipulando o DOM para exibir outros detalhes do Pokémon conforme necessário
         })
         .catch(error => {
@@ -370,33 +396,7 @@ function fetchPokemonDetails(pokemonNumber) {
         });
 }
 
-// Adicionar evento de clique para as imagens de Pokémon
-document.querySelectorAll('.poke-photo').forEach(img => {
-    img.addEventListener('click', () => {
-        const cryUrl = img.getAttribute('data-cry');
-        playPokemonCry(cryUrl);
-    });
-});
 
-function playPokemonCry(cryUrl, volume = 0.1) {
-    // Cria um elemento de áudio
-    var audio = new Audio(cryUrl);
-
-    // Define o volume do áudio
-    audio.volume = volume;
-
-    // Adiciona um evento de carga para garantir que o áudio esteja pronto para reprodução
-    audio.addEventListener('canplaythrough', () => {
-        // Tenta reproduzir o áudio
-        audio.play()
-            .then(() => {
-                console.log('Áudio do choro reproduzido com sucesso!');
-            })
-            .catch((error) => {
-                console.error('Erro ao reproduzir áudio do choro:', error);
-            });
-    }, false);
-}
 
 
 function updateTypeColors(pokemon) {
@@ -441,4 +441,5 @@ function updateTypeColors(pokemon) {
     }
 
 }
+
 

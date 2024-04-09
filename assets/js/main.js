@@ -182,6 +182,14 @@ function loadPokemonItens(offset, limit) {
     });
 }
 
+
+document.querySelectorAll('.poke-photo').forEach(img => {
+    img.addEventListener('click', () => {
+        const cryUrl = img.dataset.cry;
+        playPokemonCry(cryUrl);
+    });
+});
+
 function playPokemonCry(cryUrl, volume = 0.1) {
     // Cria um elemento de áudio
     var audio = new Audio(cryUrl);
