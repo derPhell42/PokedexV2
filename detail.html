@@ -84,14 +84,14 @@
                     </button>
 
                 </div>
-                
-                
+
+
             </div>
             <div class="pkm-btn-nav">
                 <img class="previous-button-pkm" src="/assets/img/IconsPNG/PokeTextBack.png" alt="blue">
                 <img class="next-button-pkm" src="/assets/img/IconsPNG/PokeTextBack.png" alt="red">
             </div>
-            
+
 
 
             <div class="poke-composition">
@@ -121,14 +121,47 @@
 
                 <span class="stats-bg">
                     <div class="poke-stats">
-                        <p>HP - ${pokemon.hp}</p>
-                        <p>Atk - ${pokemon.atk}</p>
-                        <p>Def - ${pokemon.def}</p>
-                        <p>SAtk - ${pokemon.spatak}</p>
-                        <p>SDef - ${pokemon.spdef}</p>
-                        <p>Speed - ${pokemon.speed}</p>
+                    <div class="stat-bar">Hp
+                        <div class="stat-label">Hp</div>
+                        <div class="stat-bar-container">
+                            <div id="hp-bar" class="stat-bar-inner1"></div>
+                        </div>
                     </div>
+                    <div class="stat-bar"> Atk
+                        <div class="stat-label">Atk</div>
+                        <div class="stat-bar-container">
+                            <div id="atk-bar" class="stat-bar-inner2"></div>
+                        </div>
+                    </div>
+                    <div class="stat-bar"> Def
+                        <div class="stat-label">Def</div>
+                        <div class="stat-bar-container">
+                            <div id="def-bar" class="stat-bar-inner3"></div>
+                        </div>
+                    </div>
+                    <div class="stat-bar"> Spatk
+                        <div class="stat-label">Spatk</div>
+                        <div class="stat-bar-container">
+                            <div id="spatk-bar" class="stat-bar-inner4"></div>
+                        </div>
+                    </div>
+                    <div class="stat-bar"> Spdef
+                        <div class="stat-label">Spdef</div>
+                        <div class="stat-bar-container">
+                            <div id="spdef-bar" class="stat-bar-inner5"></div>
+                        </div>
+                    </div>
+                    <div class="stat-bar">Speed
+                        <div class="stat-label">Speed</div>
+                        <div class="stat-bar-container">
+                            <div id="speed-bar" class="stat-bar-inner6"></div>
+                        </div>
+                    </div>
+                    </div>
+        
                 </span>
+
+                
                 <div class="ablt-composition">
                     <p>Abilities</p>
                     <img class="ablt-bg" src="/assets/img/detailBG/ablt-bg.svg">

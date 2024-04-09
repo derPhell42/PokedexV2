@@ -40,14 +40,14 @@ function updatePokemonNumber(newNumber) {
     // Atualiza a visibilidade dos botões com base no número do Pokémon
     const previousButton = document.querySelector('.previous-btn');
     const nextButton = document.querySelector('.next-btn');
-    
+
     // Verifica se há um Pokémon anterior
     if (newNumber <= 1) {
         previousButton.style.display = 'none'; // Oculta o botão de "Anterior"
     } else {
         previousButton.style.display = 'block'; // Exibe o botão de "Anterior"
     }
-    
+
     // Verifica se há um próximo Pokémon
     if (newNumber >= 151) {
         nextButton.style.display = 'none'; // Oculta o botão de "Próximo"
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Atualiza a visibilidade dos botões com base no número do Pokémon
     updatePokemonNumber(parseInt(pokemonNumber));
-    
+
 
     // Obter os detalhes do Pokémon com base no número
     fetchPokemonDetails(pokemonNumber);
@@ -178,10 +178,27 @@ function fetchPokemonDetails(pokemonNumber) {
                 }
             });
 
+
+            function updateStatBar(value, barId) {
+                const bar = document.getElementById(barId);
+                const percent = (value / 300) * 100; // Assumindo que o máximo seja 300
+                bar.style.width = percent + '%';
+            }
+            
+            updateStatBar(pokemon.hp, 'hp-bar');
+            updateStatBar(pokemon.atk, 'atk-bar');
+            updateStatBar(pokemon.def, 'def-bar');
+            updateStatBar(pokemon.spatk, 'spatk-bar');
+            updateStatBar(pokemon.spdef, 'spdef-bar');
+            updateStatBar(pokemon.speed, 'speed-bar');
+            
+        
+
+
             const pokemonImage = document.querySelector('.poke-photo');
             pokemonImage.src = pokemon.photo;
             pokemonImage.alt = pokemon.name;
-            
+
 
             const nameElement = document.querySelector('.name p');
             nameElement.textContent = pokemon.name;
@@ -223,7 +240,10 @@ function fetchPokemonDetails(pokemonNumber) {
             const cryElement = document.querySelector('.poke-photo');
             cryElement.dataset.cry = pokemon.cries; // Atribua a URL do áudio aqui
 
+            
 
+           
+           
 
             // Adicionar ouvinte de evento de clique aos botões de coração
             document.querySelectorAll('.badge-heart-button').forEach(button => {
@@ -419,10 +439,6 @@ function updateTypeColors(pokemon) {
             badge.style.display = 'none';
         });
     }
-    
+
 }
 
-
-
-// Chamada da função para atualizar as cores dos tipos e as badges do Pokémon
-updateTypeColors(pokemon);

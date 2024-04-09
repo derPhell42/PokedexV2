@@ -20,7 +20,7 @@
 
 
 }
-    
+
 
 .normal {
     background-color: #a6a877;
@@ -182,7 +182,7 @@ body::after {
     z-index: 1;
     backdrop-filter: blur(20px);
     background-color: rgba(255, 253, 253, 0.2);
-    box-shadow: 0px -5px 10px rgb(31, 30, 30, 0.99);   
+    box-shadow: 0px -5px 10px rgb(31, 30, 30, 0.99);
 }
 
 .menu-bg {
@@ -202,7 +202,7 @@ body::after {
     background-color: rgba(207, 199, 199, 0.8);
     position: relative;
     margin: 0.4rem;
-    background-size: cover;    
+    background-size: cover;
     box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.5);
     height: 29rem;
     border-radius: 20px;
@@ -213,7 +213,7 @@ body::after {
 
 
 .top-buttons {
-    position: sticky;    
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -222,7 +222,7 @@ body::after {
     z-index: 50;
 }
 
-.poke-front {    
+.poke-front {
     height: 37rem;
     position: relative;
 }
@@ -261,17 +261,17 @@ button {
 }
 
 
-.pkm-nmbr {  
+.pkm-nmbr {
     position: absolute;
     background-color: inherit;
     font-size: 4rem;
     bottom: -0.5rem;
-    right: -0.45rem;    
+    right: -0.45rem;
     color: rgba(95, 95, 95, 0.151);
 }
 
 
-.pokeContainer {    
+.pokeContainer {
     justify-content: center;
     align-items: center;
     height: 65.0vh;
@@ -289,8 +289,8 @@ button {
     width: 50.1%;
     right: 0;
     height: 50rem;
-    
-    float: right;    
+
+    float: right;
     z-index: -3;
 }
 
@@ -299,14 +299,14 @@ button {
     width: 50%;
     left: 0px;
     height: 50rem;
-   
+
     float: left;
     z-index: -3;
 }
 
 
 
-.back-img {   
+.back-img {
     width: 60%;
     top: 6.5rem;
     z-index: 5;
@@ -320,7 +320,7 @@ button {
     height: 05vh;
 }
 
-.poke-photo {   
+.poke-photo {
     width: 40%;
     top: 17.2rem;
     z-index: 10;
@@ -404,7 +404,7 @@ button {
 
 .nav-btn-box {
     display: flex;
-    position: absolute;    
+    position: absolute;
     justify-content: space-between;
     bottom: 16rem;
     /* Defina a altura conforme necessário */
@@ -412,27 +412,28 @@ button {
 
 .l-nav-buttons {
     position: absolute;
-    left: -1.18rem;    
-    
+    left: -1.18rem;
+
 }
 
 .r-nav-buttons {
     position: absolute;
     right: -56.57rem;
-    
+
 }
 
-.pkm-btn-nav{
+.pkm-btn-nav {
     position: absolute;
     justify-content: space-between;
     bottom: 13rem;
     display: flex;
     pointer-events: none;
 }
+
 .previous-button-pkm {
     position: absolute;
     top: -0.14rem;
-    left: 0.89rem;     
+    left: 0.89rem;
     height: 50px;
     width: 50px;
     pointer-events: none;
@@ -442,7 +443,7 @@ button {
     position: relative;
     top: -0.14rem;
     right: -51.30rem;
-    
+
     height: 50px;
     width: 50px;
     pointer-events: none;
@@ -485,7 +486,7 @@ button {
     position: absolute;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .poke-ablt-bg {
@@ -493,7 +494,7 @@ button {
     width: 50rem;
     height: 6rem;
     position: relative;
-    left: 2.2rem;    
+    left: 2.2rem;
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 25px;
     box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.75);
@@ -545,24 +546,101 @@ button {
     position: absolute;
     bottom: 3.45rem;
     left: 0.37rem;
-    
+
 }
-.badge-trade{
+
+.badge-trade {
     height: 43px;
     width: 43px;
 }
 
+.stat-bar {
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    position: absolute;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: rgb(245, 245, 245);
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-bar-container {
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.986), rgba(128, 128, 128, 0.8) 90%);
+    border-radius: 30px;
+
+}
+
+.stat-bar-inner1 {
+    height: 100%;
+    background-color: #04B656;
+    width: 0;
+    /* Inicialmente a largura será 0 */
+    transition: width 0.5s ease-in-out;
+    /* Adiciona uma transição suave */
+}
+
+.stat-bar-inner2 {
+    height: 100%;
+    background-color: #071DDC;
+    width: 0;
+    /* Inicialmente a largura será 0 */
+    transition: width 0.5s ease-in-out;
+    /* Adiciona uma transição suave */
+}
+
+.stat-bar-inner3 {
+    height: 100%;
+    background-color: #5FB2FF;
+    width: 0;
+    /* Inicialmente a largura será 0 */
+    transition: width 0.5s ease-in-out;
+    /* Adiciona uma transição suave */
+}
+
+.stat-bar-inner4 {
+    height: 100%;
+    background-color: #F12E74;
+    width: 0;
+    /* Inicialmente a largura será 0 */
+    transition: width 0.5s ease-in-out;
+    /* Adiciona uma transição suave */
+}
+
+.stat-bar-inner5 {
+    height: 100%;
+    background-color: #980049;
+    width: 0;
+    /* Inicialmente a largura será 0 */
+    transition: width 0.5s ease-in-out;
+    /* Adiciona uma transição suave */
+}
+
+.stat-bar-inner6 {
+    height: 100%;
+    background-color: #FF7A00;
+    width: 0;
+    /* Inicialmente a largura será 0 */
+    transition: width 0.5s ease-in-out;
+    /* Adiciona uma transição suave */
+}
 
 
-.badge-lkg-trade-button{
+.badge-lkg-trade-button {
     display: flex;
     position: absolute;
     bottom: -7.32rem;
     right: 6.37rem;
-    
+
 }
 
-.badge-lkg-trade{
+.badge-lkg-trade {
     height: 53px;
     width: 53px;
 }
@@ -581,12 +659,16 @@ button {
 
 @media (max-width: 600px) {
     .nav-btn-box {
-        flex-direction: column; /* Empilha os botões verticalmente em telas pequenas */
+        flex-direction: column;
+        /* Empilha os botões verticalmente em telas pequenas */
     }
 
-    .l-nav-buttons, .r-nav-buttons {
-        justify-content: center; /* Centraliza os botões */
-        padding: 5px 0; /* Ajusta o espaçamento */
+    .l-nav-buttons,
+    .r-nav-buttons {
+        justify-content: center;
+        /* Centraliza os botões */
+        padding: 5px 0;
+        /* Ajusta o espaçamento */
     }
 }
 
