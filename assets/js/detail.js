@@ -331,11 +331,11 @@ function fetchPokemonDetails(pokemonNumber) {
             pokemonImage.src = pokemon.photo;
             pokemonImage.alt = pokemon.name;
 
-            const pokemonMiniImagePrevious = document.querySelector('.previous-button-pkm');
-            pokemonMiniImagePrevious.src = pokemon.icon;
+            // const pokemonMiniImagePrevious = document.querySelector('.previous-button-pkm');
+            // pokemonMiniImagePrevious.src = pokemon.icon;
 
-            const pokemonMiniImageNext = document.querySelector('.next-button-pkm');
-            pokemonMiniImageNext.src = pokemon.icon;
+            // const pokemonMiniImageNext = document.querySelector('.next-button-pkm');
+            // pokemonMiniImageNext.src = pokemon.icon;
 
 
             const nameElement = document.querySelector('.name p');
