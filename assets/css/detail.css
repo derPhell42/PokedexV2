@@ -432,20 +432,19 @@ button {
 
 .previous-button-pkm {
     position: absolute;
-    top: -0.14rem;
-    left: 0.89rem;
-    height: 50px;
-    width: 50px;
+    top: -0.54rem;
+    left: 0.29rem;
+    height: 60px;
+    width: 60px;
     pointer-events: none;
 }
 
 .next-button-pkm {
     position: relative;
-    top: -0.14rem;
+    top: -0.54rem;
     right: -51.30rem;
-
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     pointer-events: none;
 }
 

@@ -331,6 +331,12 @@ function fetchPokemonDetails(pokemonNumber) {
             pokemonImage.src = pokemon.photo;
             pokemonImage.alt = pokemon.name;
 
+            const pokemonMiniImagePrevious = document.querySelector('.previous-button-pkm');
+            pokemonMiniImagePrevious.src = pokemon.icon;
+
+            const pokemonMiniImageNext = document.querySelector('.next-button-pkm');
+            pokemonMiniImageNext.src = pokemon.icon;
+
 
             const nameElement = document.querySelector('.name p');
             nameElement.textContent = pokemon.name;
@@ -354,6 +360,7 @@ function fetchPokemonDetails(pokemonNumber) {
             const cryElement = document.querySelector('.poke-photo');
             cryElement.dataset.cry = pokemon.cries; // Atribua a URL do áudio aqui
 
+            
 
             document.querySelectorAll('.poke-photo').forEach(img => {
                 img.addEventListener('click', () => {
