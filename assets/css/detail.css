@@ -554,11 +554,18 @@ button {
     width: 43px;
 }
 
-.stat-bar {
-    margin-bottom: 10px;
+.stat-bar1,
+.stat-bar2,
+.stat-bar3,
+.stat-bar4,
+.stat-bar5,
+.stat-bar6
+{
+    margin-bottom: 0.62rem;
     padding-left: 0.8rem;
     
     padding: 0.27rem;
+    
 }
 
 .stat-label1,
@@ -594,7 +601,9 @@ button {
 
 }
 
-
+.stat-bar1{
+    color:#04B656;
+}
 .stat-bar-inner1 {
     height: 100%;
     background-color: #04B656;
@@ -604,6 +613,9 @@ button {
     /* Adiciona uma transição suave */
 }
 
+.stat-bar2{
+    color:#071DDC;
+}
 .stat-bar-inner2 {
     height: 100%;
     background-color: #071DDC;
@@ -613,6 +625,9 @@ button {
     /* Adiciona uma transição suave */
 }
 
+.stat-bar3{
+    color:#5FB2FF;
+}
 .stat-bar-inner3 {
     height: 100%;
     background-color: #5FB2FF;
@@ -620,6 +635,10 @@ button {
     /* Inicialmente a largura será 0 */
     transition: width 0.5s ease-in-out;
     /* Adiciona uma transição suave */
+}
+
+.stat-bar4{
+    color:#F12E74;
 }
 
 .stat-bar-inner4 {
@@ -630,7 +649,9 @@ button {
     transition: width 0.5s ease-in-out;
     /* Adiciona uma transição suave */
 }
-
+.stat-bar5{
+    color:#980049;
+}
 .stat-bar-inner5 {
     height: 100%;
     background-color: #980049;
@@ -640,6 +661,10 @@ button {
     /* Adiciona uma transição suave */
 }
 
+.stat-bar6{
+    color:#FF7A00;
+    
+}
 .stat-bar-inner6 {
     height: 100%;
     background-color: #FF7A00;
@@ -649,6 +674,13 @@ button {
     /* Adiciona uma transição suave */
 }
 
+.bar-text {
+    position: absolute;
+    z-index: 500;
+    color: rgb(0, 0, 0);
+    margin-top: 0.11rem;
+    transition: left 0.5s ease-in-out;
+ }
 
 .badge-lkg-trade-button {
     display: flex;

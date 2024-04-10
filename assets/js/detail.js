@@ -178,11 +178,25 @@ function fetchPokemonDetails(pokemonNumber) {
                 }
             });
 
-
             function updateStatBar(value, barId) {
                 const bar = document.getElementById(barId);
                 const percent = (value / 300) * 100; // Assumindo que o máximo seja 300
                 bar.style.width = percent + '%';
+
+                // Adicionando o texto dentro da barra
+                let textElement = bar.querySelector('.bar-text');
+                if (!textElement) {
+                    const newTextElement = document.createElement('span');
+                    newTextElement.classList.add('bar-text');
+                    bar.appendChild(newTextElement);
+                    textElement = newTextElement;
+                }
+
+                // Posicionando o texto na ponta direita da barra
+                textElement.style.left = 'calc(' + percent + '% + 5px)'; // Ajuste de margem para alinhar o texto
+
+                // Definindo o valor do texto como o valor da barra
+                textElement.textContent = value;
             }
 
             updateStatBar(pokemon.hp, `hp-bar`);
@@ -325,25 +339,7 @@ function fetchPokemonDetails(pokemonNumber) {
             numberElement.textContent = `#${pokemon.number}`;
 
             const hweightElement = document.querySelector('.poke-data');
-            hweightElement.textContent = `Peso: ${formattedWeight} | Altura: ${formattedHeight}`;
-
-            const hpElement = document.querySelector('.stat-label1');
-            hpElement.textContent = `${pokemon.hp}`;
-
-            const atkElement = document.querySelector('.stat-label2');
-            atkElement.textContent = `${pokemon.atk}`;
-
-            const defElement = document.querySelector('.stat-label3');
-            defElement.textContent = `${pokemon.def}`;
-
-            const spatkElement = document.querySelector('.stat-label4');
-            spatkElement.textContent = `${pokemon.spatk}`;
-
-            const spdefElement = document.querySelector('.stat-label5');
-            spdefElement.textContent = `${pokemon.spdef}`;
-
-            const speedElement = document.querySelector('.stat-label6');
-            speedElement.textContent = `${pokemon.speed}`;
+            hweightElement.textContent = `Weight: ${formattedWeight} | Height: ${formattedHeight}`;         
 
             const ablt1Element = document.querySelector('.n-ablt1');
             ablt1Element.textContent = pokemon.ablt1;
