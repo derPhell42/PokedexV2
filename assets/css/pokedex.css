@@ -340,11 +340,12 @@ h1 {
 .pagination button {
     padding: .25rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: .725rem;
     color: #ffffff;
-    background-color: #6c79db;
+    background-color: #c00202;
     border: none;
     border-radius: 1rem;
+    
 }
 
 @media screen and (min-width: 380px) {
