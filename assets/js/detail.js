@@ -290,7 +290,7 @@ function fetchPokemonDetails(pokemonNumber) {
                         button.setAttribute('data-state', 'active-event');
                         button.querySelector('.badge-trade').src = "/assets/img/TradeV2Event.svg";
                     } else if (currentState === 'active-event') {
-                        button.setAttribute('data-state', 'active-eventsh');
+                        button.setAttribute('data-state', 'active-event-shiny');
                         button.querySelector('.badge-trade').src = "/assets/img/TradeV2EventSh.svg";
                     } else {
                         button.setAttribute('data-state', 'inactive');
@@ -298,33 +298,33 @@ function fetchPokemonDetails(pokemonNumber) {
                     }
                 });
             });
+          
+                    document.querySelectorAll('.badge-lkg-trade-button').forEach(button => {
+                        button.addEventListener('click', () => {
+                            // Verifique o estado atual do botão
+                            const currentState = button.getAttribute('data-state');
+        
+                            // Alternar as classes e o atributo src da imagem com base no estado atual
+                            if (currentState === 'inactive') {
+                                button.setAttribute('data-state', 'active');
+                                button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballColored.svg";
+                            } else if (currentState === 'active') {
+                                button.setAttribute('data-state', 'active-shiny');
+                                button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballColoredShiny.svg";
+                            } else if (currentState === 'active-shiny') {
+                                button.setAttribute('data-state', 'active-event');
+                                button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEvent.svg";
+                            } else if (currentState === 'active-event') {
+                                button.setAttribute('data-state', 'active-event-shiny');
+                                button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEventSh.svg";
+                            } else {
+                                button.setAttribute('data-state', 'inactive');
+                                button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEmpty.svg";
+                            }
+                        });
+                    });
 
-            document.querySelectorAll('.badge-lkg-trade-button').forEach(button => {
-                button.addEventListener('click', () => {
-                    // Verifique o estado atual do botão
-                    const currentState = button.getAttribute('data-state');
-
-                    // Alternar as classes e o atributo src da imagem com base no estado atual
-                    if (currentState === 'inactive') {
-                        button.setAttribute('data-state', 'active');
-                        button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballColored.svg";
-                    } else if (currentState === 'active') {
-                        button.setAttribute('data-state', 'active-shiny');
-                        button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballColoredShiny.svg";
-                    } else if (currentState === 'active-shiny') {
-                        button.setAttribute('data-state', 'active-event');
-                        button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEvent.svg";
-                    } else if (currentState === 'active-event') {
-                        button.setAttribute('data-state', 'active-event-shiny');
-                        button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEventSh.svg";
-                    } else {
-                        button.setAttribute('data-state', 'inactive');
-                        button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEmpty.svg";
-                    }
-                });
-            });
-
-            // Adicionar evento de clique para as imagens de Pokémon
+                        // Adicionar evento de clique para as imagens de Pokémon
 
 
             const pokemonImage = document.querySelector('.poke-photo');
@@ -345,7 +345,7 @@ function fetchPokemonDetails(pokemonNumber) {
             numberElement.textContent = `#${pokemon.number}`;
 
             const hweightElement = document.querySelector('.poke-data');
-            hweightElement.textContent = `Weight: ${formattedWeight} | Height: ${formattedHeight}`;         
+            hweightElement.textContent = `Weight: ${formattedWeight} | Height: ${formattedHeight}`;
 
             const ablt1Element = document.querySelector('.n-ablt1');
             ablt1Element.textContent = pokemon.ablt1;
@@ -360,7 +360,7 @@ function fetchPokemonDetails(pokemonNumber) {
             const cryElement = document.querySelector('.poke-photo');
             cryElement.dataset.cry = pokemon.cries; // Atribua a URL do áudio aqui
 
-            
+
 
             document.querySelectorAll('.poke-photo').forEach(img => {
                 img.addEventListener('click', () => {
