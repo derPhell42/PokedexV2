@@ -76,6 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchPokemonDetails(pokemonNumber);
 });
 
+
+
 function fetchPokemonDetails(pokemonNumber) {
     // Remover os zeros à esquerda do número do Pokémon
     const formattedPokemonNumber = parseInt(pokemonNumber, 10);
@@ -115,7 +117,9 @@ function fetchPokemonDetails(pokemonNumber) {
             pokemon.icon = pokeDetail.sprites.versions['generation-viii'].icons.front_default;
 
 
-            pokemon.cries = pokeDetail.cries.latest
+            pokemon.cries = pokeDetail.cries.latest;
+           
+                      
 
             pokeDetail.stats.forEach(stat => {
                 const statName = stat.stat.name;
@@ -298,33 +302,33 @@ function fetchPokemonDetails(pokemonNumber) {
                     }
                 });
             });
-          
-                    document.querySelectorAll('.badge-lkg-trade-button').forEach(button => {
-                        button.addEventListener('click', () => {
-                            // Verifique o estado atual do botão
-                            const currentState = button.getAttribute('data-state');
-        
-                            // Alternar as classes e o atributo src da imagem com base no estado atual
-                            if (currentState === 'inactive') {
-                                button.setAttribute('data-state', 'active');
-                                button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballColored.svg";
-                            } else if (currentState === 'active') {
-                                button.setAttribute('data-state', 'active-shiny');
-                                button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballColoredShiny.svg";
-                            } else if (currentState === 'active-shiny') {
-                                button.setAttribute('data-state', 'active-event');
-                                button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEvent.svg";
-                            } else if (currentState === 'active-event') {
-                                button.setAttribute('data-state', 'active-event-shiny');
-                                button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEventSh.svg";
-                            } else {
-                                button.setAttribute('data-state', 'inactive');
-                                button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEmpty.svg";
-                            }
-                        });
-                    });
 
-                        // Adicionar evento de clique para as imagens de Pokémon
+            document.querySelectorAll('.badge-lkg-trade-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    // Verifique o estado atual do botão
+                    const currentState = button.getAttribute('data-state');
+
+                    // Alternar as classes e o atributo src da imagem com base no estado atual
+                    if (currentState === 'inactive') {
+                        button.setAttribute('data-state', 'active');
+                        button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballColored.svg";
+                    } else if (currentState === 'active') {
+                        button.setAttribute('data-state', 'active-shiny');
+                        button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballColoredShiny.svg";
+                    } else if (currentState === 'active-shiny') {
+                        button.setAttribute('data-state', 'active-event');
+                        button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEvent.svg";
+                    } else if (currentState === 'active-event') {
+                        button.setAttribute('data-state', 'active-event-shiny');
+                        button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEventSh.svg";
+                    } else {
+                        button.setAttribute('data-state', 'inactive');
+                        button.querySelector('.badge-lkg-trade').src = "/assets/img/LokingballEmpty.svg";
+                    }
+                });
+            });
+
+            // Adicionar evento de clique para as imagens de Pokémon
 
 
             const pokemonImage = document.querySelector('.poke-photo');
@@ -368,29 +372,7 @@ function fetchPokemonDetails(pokemonNumber) {
                     playPokemonCry(cryUrl);
                 });
             });
-
-            function playPokemonCry(cryUrl, volume = 0.1) {
-                // Cria um elemento de áudio
-                var audio = new Audio(cryUrl);
-
-                // Define o volume do áudio
-                audio.volume = volume;
-
-                // Adiciona um evento de carga para garantir que o áudio esteja pronto para reprodução
-                audio.addEventListener('canplaythrough', () => {
-                    // Tenta reproduzir o áudio
-                    audio.play()
-                        .then(() => {
-                            console.log('Áudio do choro reproduzido com sucesso!');
-                        })
-                        .catch((error) => {
-                            console.error('Erro ao reproduzir áudio do choro:', error);
-                        });
-                }, false);
-            }
-
-
-
+            
 
             // Continue manipulando o DOM para exibir outros detalhes do Pokémon conforme necessário
         })
@@ -399,7 +381,25 @@ function fetchPokemonDetails(pokemonNumber) {
         });
 }
 
+let audio = new Audio();
 
+async function playPokemonCry(cryUrl, volume = 0.1) {
+    // Criar uma nova instância de Audio
+    // let audio = new Audio();
+
+    // Definir o novo src (URL do áudio)
+    audio.src = cryUrl;
+
+    // Definir o volume do áudio
+    audio.volume = volume;
+
+    try {
+        await audio.play();
+        console.log('Áudio do choro reproduzido com sucesso!');
+    } catch (error) {
+        console.error('Erro ao reproduzir áudio do choro:', error);
+    }
+}
 
 
 function updateTypeColors(pokemon) {
