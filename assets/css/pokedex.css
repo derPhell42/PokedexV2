@@ -10,7 +10,7 @@
     --poison: #a040a0;
     --fighting: #bf3029;
     --psychic: #f65687;
-    --dark: #725847;
+    --dark: #50413f;
     --rock: #b8a137;
     --bug: #a8b720;
     --ghost: #6e5896;
@@ -149,7 +149,7 @@ h1 {
 }
 
 .dark {
-    background-color: #725847;
+    background-color: #50413f;
 }
 
 .rock {

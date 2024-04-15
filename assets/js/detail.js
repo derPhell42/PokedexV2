@@ -41,18 +41,28 @@ function updatePokemonNumber(newNumber) {
     const previousButton = document.querySelector('.previous-btn');
     const nextButton = document.querySelector('.next-btn');
 
+
+    // const previousPkm = document.querySelector('.previous-button-pkm');
+    // const nextPkm = document.querySelector('.next-button-pkm');
+
+    
+
     // Verifica se há um Pokémon anterior
     if (newNumber <= 1) {
         previousButton.style.display = 'none'; // Oculta o botão de "Anterior"
+        // previousPkm.style.display = 'none'; // Oculta o Poke de "Anterior"
     } else {
         previousButton.style.display = 'block'; // Exibe o botão de "Anterior"
+        // previousPkm.style.display = 'block'; // Exibe o Poke de "Anterior"
     }
 
     // Verifica se há um próximo Pokémon
     if (newNumber >= 151) {
         nextButton.style.display = 'none'; // Oculta o botão de "Próximo"
+        // nextPkm.style.display = 'none'; // Oculta o Poke de "Próximo"
     } else {
         nextButton.style.display = 'block'; // Exibe o botão de "Próximo"
+        // nextPkm.style.display = 'block'; // Exibe o Poke de "Próximo"
     }
 }
 
